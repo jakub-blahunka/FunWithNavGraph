@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="org.jaku8ka.fun.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_LoginFragment_to_RegisterFragment"
+            app:destination="@id/RegisterFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_LoginFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="org.jaku8ka.fun.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="org.jaku8ka.fun.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_HomeFragment_to_GameFragment"
+            app:destination="@id/GameFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_HomeFragment_to_LeaderBoardFragment"
+            app:destination="@id/LeaderBoardFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/GameFragment"
+        android:name="org.jaku8ka.fun.GameFragment"
+        android:label="Game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_GameFragment_to_DefeatFragment"
+            app:destination="@id/DefeatFragment" />
+        <action
+            android:id="@+id/action_GameFragment_to_WinFragment"
+            app:destination="@id/WinFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/LeaderBoardFragment"
+        android:name="org.jaku8ka.fun.LeaderBoardFragment"
+        android:label="Leaderboard"
+        tools:layout="@layout/fragment_leader_board" />
+    <fragment
+        android:id="@+id/WinFragment"
+        android:name="org.jaku8ka.fun.WinFragment"
+        android:label="Win"
+        tools:layout="@layout/fragment_win" />
+    <fragment
+        android:id="@+id/DefeatFragment"
+        android:name="org.jaku8ka.fun.DefeatFragment"
+        android:label="Defeat"
+        tools:layout="@layout/fragment_defeat" />
+
+
+</navigation>
