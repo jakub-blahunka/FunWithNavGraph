@@ -8,6 +8,15 @@
     android:id="@+id/tap_to_start"
     tools:context=".GameFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/tappable"
+        android:clickable="true"
+        android:visibility="gone">
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tap"
         android:layout_width="wrap_content"
