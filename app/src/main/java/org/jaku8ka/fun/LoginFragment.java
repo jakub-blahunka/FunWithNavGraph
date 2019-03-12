@@ -19,7 +19,7 @@ import android.widget.Button;
  */
 public class LoginFragment extends Fragment {
 
-    Button loginBtn;
+    Button registerBtn;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -37,8 +37,8 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        loginBtn = view.findViewById(R.id.login_btn);
-        loginBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_LoginFragment_to_RegisterFragment));
+        registerBtn = view.findViewById(R.id.register_btn);
+        registerBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_LoginFragment_to_RegisterFragment));
     }
 }
 

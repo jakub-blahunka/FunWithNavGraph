@@ -44,6 +44,7 @@
         <action
             android:id="@+id/action_HomeFragment_to_LeaderBoardFragment"
             app:destination="@id/LeaderBoardFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
             app:launchSingleTop="true" />
     </fragment>
     <fragment
