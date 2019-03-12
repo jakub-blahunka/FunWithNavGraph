@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/LoginFragment">
+    app:startDestination="@id/WinFragment">
 
     <fragment
         android:id="@+id/LoginFragment"
@@ -14,10 +14,7 @@
             android:id="@+id/action_LoginFragment_to_RegisterFragment"
             app:destination="@id/RegisterFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:launchSingleTop="true"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:launchSingleTop="true" />
         <action
             android:id="@+id/action_LoginFragment_to_HomeFragment"
             app:destination="@id/HomeFragment"
@@ -32,10 +29,8 @@
             android:id="@+id/action_RegisterFragment_to_LoginFragment"
             app:destination="@id/LoginFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
             app:launchSingleTop="true"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/HomeFragment"
@@ -58,10 +53,12 @@
         tools:layout="@layout/fragment_game" >
         <action
             android:id="@+id/action_GameFragment_to_DefeatFragment"
-            app:destination="@id/DefeatFragment" />
+            app:destination="@id/DefeatFragment"
+            app:launchSingleTop="true" />
         <action
             android:id="@+id/action_GameFragment_to_WinFragment"
             app:destination="@id/WinFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
             app:launchSingleTop="true" />
     </fragment>
     <fragment
@@ -75,8 +72,11 @@
         android:label="Win"
         tools:layout="@layout/fragment_win" >
         <action
-            android:id="@+id/action_WinFragment_to_LeaderBoardFragment"
-            app:destination="@id/LeaderBoardFragment" />
+            android:id="@+id/action_WinFragment_to_HomeFragment"
+            app:destination="@+id/HomeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpTo="@+id/WinFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/DefeatFragment"
@@ -84,8 +84,12 @@
         android:label="Defeat"
         tools:layout="@layout/fragment_defeat" >
         <action
-            android:id="@+id/action_DefeatFragment_to_HomeFragment"
-            app:destination="@id/HomeFragment" />
+            android:id="@+id/action_DefeatFragment_to_GameFragment"
+            app:destination="@+id/GameFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/DefeatFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
 
