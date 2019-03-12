@@ -73,12 +73,20 @@
         android:id="@+id/WinFragment"
         android:name="org.jaku8ka.fun.WinFragment"
         android:label="Win"
-        tools:layout="@layout/fragment_win" />
+        tools:layout="@layout/fragment_win" >
+        <action
+            android:id="@+id/action_WinFragment_to_LeaderBoardFragment"
+            app:destination="@id/LeaderBoardFragment" />
+    </fragment>
     <fragment
         android:id="@+id/DefeatFragment"
         android:name="org.jaku8ka.fun.DefeatFragment"
         android:label="Defeat"
-        tools:layout="@layout/fragment_defeat" />
+        tools:layout="@layout/fragment_defeat" >
+        <action
+            android:id="@+id/action_DefeatFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
 
 
 </navigation>
